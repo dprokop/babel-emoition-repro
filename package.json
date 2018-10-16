@@ -1,0 +1,29 @@
+{
+  "name": "styrerommet",
+  "engines": {
+    "node": "8.x.x"
+  },
+  "private": true,
+  "scripts": {
+    "preinstall": "cd web && npm install",
+    "init": "(cd .)",
+    "reset": "(cd .)",
+    "dev": "node scripts/dev",
+    "build": "(cd web && npm run build)",
+    "heroku-postbuild": "npm run init && npm run build",
+    "start": "node scripts/start",
+    "deploy": "git fetch origin master:production && git push origin production:production && git branch -D production",
+    "test": "jest --projects api web",
+    "storybook": "(cd web && npm run storybook)",
+    "precommit": "cd web && npm run precommit"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "force-ssl-heroku": "^1.0.2"
+  },
+  "devDependencies": {
+    "dotenv": "^4.0.0",
+    "husky": "^0.14.3",
+    "jest": "^22.4.2"
+  }
+}

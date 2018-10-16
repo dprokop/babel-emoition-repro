@@ -1,0 +1,27 @@
+{
+  "extends": "react-app",
+  "settings": {
+    "react": {
+      "version": "16.5.2"
+    }
+  },
+  "rules": {
+    "import/no-unresolved": "error",
+    "import/no-extraneous-dependencies": "error",
+    "no-return-await": "warn",
+    "require-await": "error",
+    "react/prop-types": [
+      "warn",
+      {
+        "skipUndeclared": true
+      }
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "after-used",
+        "ignoreRestSiblings": true
+      }
+    ]
+  }
+}

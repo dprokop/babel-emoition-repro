@@ -1,0 +1,11 @@
+build/
+node_modules/
+.env
+db.sqlite3*
+yarn.lock
+yarn-error.log
+npm-debug.log
+*/npm-debug.log
+.idea/*
+*/data/storage/*
+.DS_Store

@@ -1,0 +1,13 @@
+language: node_js
+node_js: '8'
+branches:
+  only:
+    - master
+script:
+  - if [ ${TRAVIS_PULL_REQUEST} != "false" ]; then
+      (cd web && npm run storybook:snapshot)
+    else
+      (cd web && npm run storybook:snapshot -- --auto-accept-changes)
+    fi
+  - (cd web && npm run test:ci)
+  - (cd api && npm run test:ci)

@@ -1,0 +1,16 @@
+{
+  "name": "styrerommet",
+  "env": {
+    "HEROKU_APP_NAME": {
+      "required": false
+    },
+    "USE_MOCK_SEARCH": "true",
+    "USE_MOCK_STORAGE": "true",
+    "PASSWORD": "***"
+  },
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
